@@ -1,15 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'velvet/cushion/version'
+require 'velvet_cushion/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "velvet-cushion"
-  spec.version       = Velvet::Cushion::VERSION
+  spec.version       = VelvetCushion::VERSION
   spec.authors       = ["Ben Dunkley"]
   spec.email         = ["ben@chemica.co.uk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Allow recursive stuffing of API data into ActiveRecord objects}
+  spec.description   = %q{Stuffs ActiveRecord objects with API data. Makes intelligent guesses about object
+                          relationships based on ActiveRecord relationships and allows overriding of particular
+                          field names with class level model directives if required.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +22,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+
+  spec.add_development_dependency "rspec"
+
+  spec.add_development_dependency "byebug"
+
 end

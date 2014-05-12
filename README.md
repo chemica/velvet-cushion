@@ -1,4 +1,4 @@
-# Velvet::Cushion
+# VelvetCushion
 
 TODO: Write a gem description
 
