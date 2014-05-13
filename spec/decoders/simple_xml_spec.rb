@@ -1,5 +1,5 @@
 require "spec_helper"
-require 'velvet_cushion/decoders/simple_xml'
+#require 'velvet_cushion/decoders/simple_xml'
 
 describe VelvetCushion::Decoders::SimpleXml do
   it "turns simple XML into an object" do

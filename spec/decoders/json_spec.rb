@@ -1,5 +1,5 @@
 require "spec_helper"
-require 'velvet_cushion/decoders/json'
+#require 'velvet_cushion/decoders/json'
 
 describe VelvetCushion::Decoders::Json do
   it "turns simple JSON into an object" do
