@@ -1,5 +1,5 @@
 language: ruby
-script: "rspec spec"
+script: "bundle ; rspec spec"
 rvm:
   - 1.9.2
   - 1.9.3
