@@ -8,7 +8,10 @@
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default, :development)
-Dir[File.dirname(__FILE__) + '/../lib/**/*.rb'].each {|file| require file }
+Dir[File.dirname(__FILE__) + '/../lib/**/*.rb'].each do |file|
+  puts "Requiring: #{file}"
+  require file
+end
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

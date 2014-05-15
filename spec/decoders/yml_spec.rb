@@ -1,5 +1,4 @@
 require "spec_helper"
-require 'velvet_cushion/decoders/yaml'
 
 describe VelvetCushion::Decoders::Yaml do
   it "turns simple JSON into an object" do
