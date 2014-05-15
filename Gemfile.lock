@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     velvet-cushion (0.0.1)
-      activerecord (>= 3.0)
+      activerecord
 
 GEM
   remote: https://rubygems.org/
@@ -26,12 +26,17 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
     columnize (0.8.9)
+    debugger (1.6.6)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.2)
     debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.4)
     diff-lcs (1.2.5)
     i18n (0.6.9)
     json (1.8.1)
     minitest (5.3.3)
-    rake (10.1.0)
+    rake (10.3.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -48,8 +53,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.5)
+  bundler
   byebug
+  debugger
   rake
   rspec
   velvet-cushion!

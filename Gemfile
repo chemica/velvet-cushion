@@ -4,3 +4,5 @@ source 'https://rubygems.org'
 gemspec
 
 gem "rake"
+gem "debugger", :platform => [:ruby_18, :ruby_19]
+gem "byebug", :platform => [:ruby_20]
