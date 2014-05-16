@@ -10,10 +10,17 @@ require 'bundler/setup'
 Bundler.require(:default, :development)
 Dir[File.dirname(__FILE__) + '/../lib/**/*.rb'].each { |file| require file }
 
+ActiveRecord::Base.establish_connection(:adapter => "sqlite3",
+                                        :database => ":memory:")
+
+load File.dirname(__FILE__) + '/schema.rb'
+require File.dirname(__FILE__) + '/models.rb'
+
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
+
 
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing

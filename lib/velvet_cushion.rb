@@ -1,21 +1,21 @@
 require 'velvet_cushion/version'
-# require 'velvet_cushion/active_record/acts/cushion'
-# require 'active_record'
+require 'velvet_cushion/active_record/acts/cushion'
+require 'active_record'
 
 module VelvetCushion
-  # begin
-  #   require 'rails'
-  #
-  #   class Railtie < Rails::Railtie
-  #     initializer 'acts_as_cushion.insert_into_active_record' do
-  #       ActiveSupport.on_load :active_record do
-  #         ActiveRecord::Base.send(:include, ActiveRecord::Acts::Cushion)
-  #       end
-  #     end
-  #   end
-  # rescue LoadError
-  #   ActiveRecord::Base.send(:include, ActiveRecord::Acts::Cushion) if defined?(ActiveRecord)
-  # end
+  begin
+    require 'rails'
+
+    class Railtie < Rails::Railtie
+      initializer 'acts_as_cushion.insert_into_active_record' do
+        ActiveSupport.on_load :active_record do
+          ActiveRecord::Base.send(:include, ActiveRecord::Acts::Cushion)
+        end
+      end
+    end
+  rescue LoadError
+    ActiveRecord::Base.send(:include, ActiveRecord::Acts::Cushion) if defined?(ActiveRecord)
+  end
 
 
   class << self
