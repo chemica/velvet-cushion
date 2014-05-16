@@ -1,6 +1,8 @@
+![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
+Format: ![Alt Text](url)
 # VelvetCushion
 
-TODO: Write a gem description
+Currently under development
 
 ## Installation
 
