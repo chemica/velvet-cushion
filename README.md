@@ -1,5 +1,4 @@
 ![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
-Format: ![Alt Text](url)
 # VelvetCushion
 
 Currently under development
