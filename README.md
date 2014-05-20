@@ -1,8 +1,13 @@
-[![Stories in Ready](https://badge.waffle.io/chemica/velvet-cushion.png?label=ready&title=Ready)](https://waffle.io/chemica/velvet-cushion)
-![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
 # VelvetCushion
 
-Currently under development
+[![Stories in Ready](https://badge.waffle.io/chemica/velvet-cushion.png?label=ready&title=Ready)](https://waffle.io/chemica/velvet-cushion)
+![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
+[![Gem Version](https://badge.fury.io/rb/polyamorous.svg)]
+
+Currently under development.
+
+When complete, VelvetCushion will allow JSON or other mark-up to recursively 'stuff' ActiveRecord models
+with data, respecting associations such as 'has_many' and 'belongs_to'.
 
 ## Installation
 
