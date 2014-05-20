@@ -1,6 +1,7 @@
 # VelvetCushion
 
 ![Gem Version](https://badge.fury.io/rb/polyamorous.svg)
+
 [![Stories in Ready](https://badge.waffle.io/chemica/velvet-cushion.png?label=ready&title=Ready)](https://waffle.io/chemica/velvet-cushion)
 ![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
 
