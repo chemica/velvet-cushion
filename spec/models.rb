@@ -5,3 +5,7 @@ end
 class CushionModel < ActiveRecord::Base
   acts_as_cushion
 end
+
+class ArticleModel < ActiveRecord::Base
+  acts_as_cushion
+end
