@@ -5,6 +5,8 @@
 [![Stories in Ready](https://badge.waffle.io/chemica/velvet-cushion.png?label=ready&title=Ready)](https://waffle.io/chemica/velvet-cushion)
 ![Build status](https://travis-ci.org/chemica/velvet-cushion.svg?branch=master)
 
+[![Code Climate](https://codeclimate.com/github/chemica/velvet-cushion.png)](https://codeclimate.com/github/chemica/velvet-cushion)
+
 Currently under development.
 
 When complete, VelvetCushion will allow JSON or other mark-up to recursively 'stuff' ActiveRecord models
