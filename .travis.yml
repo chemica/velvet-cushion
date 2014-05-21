@@ -1,6 +1,6 @@
 language: ruby
 install: "bundle install"
-
+script: "CODECLIMATE_REPO_TOKEN=5127d09a8b0a45c48e25f13c8a9568cd5a26ccce9e39ef749ad25bf09d8b5960 bundle exec rake"
 rvm:
   - 1.9.3
   - 2.0.0

@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rake'
-gem 'debugger', :platform => [:ruby_18, :ruby_19]
-gem 'byebug', :platform => [:ruby_20]
+gem 'debugger', :platforms => [:ruby_18, :ruby_19]
+gem 'byebug', :platforms => [:ruby_20]
 
+gem 'jdbc-sqlite3', :platforms => [:jruby]
+gem 'activerecord-jdbcsqlite3-adapter', :platforms => [:jruby]
+
+gem 'sqlite3', :platforms => [:ruby_18, :ruby_19, :ruby_20, :ruby_21]
+
+gem "codeclimate-test-reporter", group: :test, require: nil
