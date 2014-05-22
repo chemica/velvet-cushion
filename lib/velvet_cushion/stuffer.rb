@@ -34,7 +34,14 @@ module VelvetCushion
     def get_decoder(model, config = {})
       decoder = config[:decoder] ||  model.class.cushion_model_decoder || VelvetCushion.configuration.default_decoder
       decoder_classname = ActiveSupport::Inflector.camelize decoder
-      Object.const_get("VelvetCushion::Decoders::#{decoder_classname}").new
+      class_from_string("VelvetCushion::Decoders::#{decoder_classname}").new
+    end
+
+    # Required for Ruby 1.9.3. Ruby 2 allows Object.const_get with delimiters
+    def class_from_string(str)
+      str.split('::').inject(Object) do |mod, class_name|
+        mod.const_get(class_name)
+      end
     end
   end
 end
