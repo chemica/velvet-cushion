@@ -9,8 +9,8 @@ module ActiveRecord
       module InstanceMethods
 
         def stuff_with(source, options = {})
-          stuffer = VelvetCushion::Stuffer.new
-          stuffer.stuff self, source, options
+          stuffer = VelvetCushion::Stuffer.new self
+          stuffer.stuff source, options
         end
 
       end
