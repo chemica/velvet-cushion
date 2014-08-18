@@ -34,6 +34,18 @@ describe VelvetCushion::Stuffer do
     expect(author.address.author).to eq(author)
   end
 
+  it "stuffs an Address with an Author (belongs_to)" do
+    address = Address.new
+    address.stuff_with('{"name_or_number": "Duncodin",
+                         "address": "Finite Loop",
+                         "postal_code": "XY1 2AB", "author":{"name":"Henry Biggins"}}')
+    expect(address.name_or_number).to eq('Duncodin')
+    expect(address.address).to eq('Finite Loop')
+    expect(address.postal_code).to eq('XY1 2AB')
+    expect(address.author.name).to eq('Henry Biggins')
+    expect(address.author.address).to eq(address)
+  end
+
   it "stuffs an Author with Articles (has_many)" do
     author = Author.new
     author.stuff_with('{"name":"Henry Biggins", "articles":[{"title":"title 1", "body":"body 1"},' +
@@ -59,5 +71,6 @@ describe VelvetCushion::Stuffer do
     expect(publisher.authors.first.name).to eq('Henry Biggins')
     expect(publisher.authors.last.name).to eq('Peter Winkle')
   end
+
 
 end
