@@ -61,8 +61,13 @@ module VelvetCushion
         rel_model.stuff_with(value, :decoder => :hash)
       end
 
+      def create_singular_object(model, key, value)
+        rel_model = model.send(:"build_#{key}")
+        rel_model.stuff_with(value, :decoder => :hash)
+      end
+
       def inject_object(model, key, value)
-        rel_model = create_related_object(model, key, value)
+        rel_model = create_singular_object(model, key, value)
         model.send :"#{key}=", rel_model
       end
 
