@@ -27,7 +27,7 @@ ActiveRecord::Schema.define do
   end
 
   create_table :authors_publishers, id: false do |t|
-    t.references :authors
+    t.references :author
     t.references :publisher
   end
 
